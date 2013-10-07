@@ -1,0 +1,1 @@
+Problem: Given K, find the K-th minimum number from a sorted N*M matrix. Sorted matrix means the rows are sorted left to right in ascending order, and columns are sorted top to bottom in ascending order.
