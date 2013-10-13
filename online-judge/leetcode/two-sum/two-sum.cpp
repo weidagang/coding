@@ -31,11 +31,13 @@ class Solution {
             
             // sort indexed values 
             sort(ivs.begin(), ivs.end());
+            /*
             std::cout << "After sort:" << std::endl;
             for (int i = 0; i < ivs.size(); ++i) {
                 std::cout << "[i=" << ivs[i].index << ", v=" << ivs[i].value << "] ";
             }
             std::cout << std::endl;
+            */
             
             // iterate on the num1
             for (int i = 0; i < ivs.size() - 1; ++i) {
