@@ -13,7 +13,7 @@ public:
 
         std::sort(nums.begin(), nums.end());
 
-        for (int i = 0; i < nums.size(); ++i) {
+        for (int i = 0; i < (int)nums.size() - 2 && nums[i] <= 0; ++i) {
             // remove duplicates
             if (i > 0 && nums[i] == nums[i-1]) {
                 continue;
@@ -52,10 +52,6 @@ public:
 int main() {
     int n;
     while(scanf("%d", &n)) {
-        if (n <= 0) {
-            continue;
-        }
-
         int nums[N];
 
         for (int i = 0; i < n; ++i) {
@@ -63,7 +59,10 @@ int main() {
         }
 
         Solution s;
-        vector<int> v(nums, nums + n);
+        vector<int> v;
+        for (int i = 0; i < n; ++i) {
+            v.push_back(nums[i]);
+        }
         vector<vector<int> > result = s.threeSum(v);
         if (result.size() > 0) {
             for (int i = 0; i < result.size(); ++i) {
